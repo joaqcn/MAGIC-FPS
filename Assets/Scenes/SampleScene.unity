@@ -354,7 +354,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -9.81
   speed: 5
-  jumpHeight: 3
+  jumpHeight: 2
+  isCrouching: 0
+  crouchTimer: 1
+  lerpCrouch: 0
+  isSprinting: 0
+--- !u!114 &787336668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787336655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde629f172cdda7418e3057ae8ed091f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 2090199863}
+  xSensitivity: 30
+  ySensitivity: 30
 --- !u!1 &1653028726
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +479,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &2090199863 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8322878107238522025, guid: ff9544aee981432459e5ef36af777cc5, type: 3}
+  m_PrefabInstance: {fileID: 1882774724126786534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1882774724126786534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,10 +546,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6368123019881421048, guid: ff9544aee981432459e5ef36af777cc5, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 787336662}
+    - targetCorrespondingSourceObject: {fileID: 6368123019881421048, guid: ff9544aee981432459e5ef36af777cc5, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 787336663}
     - targetCorrespondingSourceObject: {fileID: 6368123019881421048, guid: ff9544aee981432459e5ef36af777cc5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 787336662}
+      addedObject: {fileID: 787336668}
   m_SourcePrefab: {fileID: 100100000, guid: ff9544aee981432459e5ef36af777cc5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
